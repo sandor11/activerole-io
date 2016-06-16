@@ -9,7 +9,7 @@ webApp.factory('appConfig', [function () {
             production: {
             },
             development: {
-                name: 'Sandor Agafonoff',
+                name: 'Sandy Agafonoff',
                 version: 'v1.0',
                 author: 'Sandor Agafonoff',
                 license: 'MIT License'
@@ -30,8 +30,17 @@ webApp.run(['$location', '$state', '$rootScope', '$timeout', '$window', 'appConf
         $rootScope.MetaTags = MetaTags;
         $rootScope.appConfig = appConfig;
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState) {
-            if (!toParams.retainScroll) {
-                document.body.scrollTop = document.documentElement.scrollTop = 0;
+            if (toState.scroll) {
+                if (toState.scroll.elem === 'top') {
+                    document.body.scrollTop = document.documentElement.scrollTop = 0;
+                }
+                else {
+                    $timeout(function() {
+                        $('html, body').animate({
+                            scrollTop: $('#' + toState.scroll.elem).offset().top - 50
+                        }, 650);
+                    });
+                }
             }
             $rootScope.activeState = toState.name;
         });
@@ -107,7 +116,7 @@ angular.module('webApp').service('preloadService', ['$rootScope', function ($roo
             window.loading_screen = window.pleaseWait({
                 logo: '',
                 backgroundColor: '#09F',
-                loadingHtml: '<div class="loading-message text-uppercase c-white font-meduim fs-36">Just getting ready.</div>'
+                loadingHtml: '<div class="loading-message c-white font-light fs-24 m-0-auto" style="max-width:540px;"><div><img src="img/app-icon-flat-hdpi.png" style="width:50%;" /></div><div class="m-t-30">Opening Personnel File</div></div>'
             });
             loading = true;
         };
@@ -167,6 +176,8 @@ angular.module('webApp').controller('overviewController', ['$scope',
         $scope.highlight = {
             java: false,
             js: false,
+            lamp: false,
+            html: false,
             ms: false,
             front: false,
             back: false
@@ -190,6 +201,49 @@ angular.module('webApp').config(['$stateProvider', '$urlRouterProvider', '$locat
                     metaTags: {
                         title: 'Sandor Agafonoff Resume',
                         description: 'Creating amazing software is what I do. I am specifically geared towards software across the web and am passionate about making the web a better place.'
+                    },
+                    scroll: {
+                        elem: 'top'
+                    }
+                })
+                .state('app.overview.objective', {
+                    url: 'objective',
+                    metaTags: {
+                        title: 'Objective',
+                        description: 'To find a position in software development which allows me to be creative, have input, and either oversee or be a part of the end to end delivery process.'
+                    },
+                    scroll: {
+                        elem: 'objective'
+                    }
+                })
+                .state('app.overview.experience', {
+                    url: 'experience',
+                    metaTags: {
+                        title: 'Work Experience',
+                        description: 'I have seen many technologies, been a part of many teams and deliver a bunch of projects. Here is the run down.'
+                    },
+                    scroll: {
+                        elem: 'experience'
+                    }
+                })
+                .state('app.overview.extras', {
+                    url: 'extras',
+                    metaTags: {
+                        title: 'Extras',
+                        description: 'I love to work, coding is my thing. I also love the variety of people you get to meet whie doing it. My world does not stop with coding though.'
+                    },
+                    scroll: {
+                        elem: 'extras'
+                    }
+                })
+                .state('app.overview.contact', {
+                    url: 'contact',
+                    metaTags: {
+                        title: 'Get in Touch',
+                        description: 'If you would to contact me about a role you may have then send me an email.'
+                    },
+                    scroll: {
+                        elem: 'contact'
                     }
                 });
 

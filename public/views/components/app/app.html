@@ -3,17 +3,49 @@
     removing inner, or placing things outside of inner will prevent the page loading correctly.
 -->
 <div class="inner">
-    <header>
+    <header class="p-fixed top-0 left-0 right-0 z-max box-shadow-1 hidden-xs">
         <div class="bg-lightgray">
             <div class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" ui-sref="app.overview"><img src="img/app-icon-flat-hdpi.png" alt="App Icon" class="height-100" /></a>
                     </div>
-                    <div class="navbar-text m-l-0 text-uppercase">{{appConfig.name}}</div>
+                    <div class="navbar-text m-l-0">{{appConfig.name}}</div>
                     <ul class="nav navbar-nav">
                         <li ng-class="{'active': activeState === 'app.overview'}"><a ui-sref="app.overview">Overview</a></li>
+                        <li ng-class="{'active': activeState === 'app.overview.objective'}"><a ui-sref="app.overview.objective">Objective</a></li>
+                        <li ng-class="{'active': activeState === 'app.overview.experience'}"><a ui-sref="app.overview.experience">Experience</a></li>
+                        <li ng-class="{'active': activeState === 'app.overview.extras'}"><a ui-sref="app.overview.extras">Extras</a></li>
+                        <li ng-class="{'active': activeState === 'app.overview.contact'}"><a ui-sref="app.overview.contact">Contact</a></li>
                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="files/sandor-agafonoff-cv.pdf" target="_blank"><i class="fa fa-file-pdf-o m-r-5"></i> Download CV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <header class="p-fixed top-0 left-0 right-0 z-max box-shadow-1 hidden-sm hidden-md hidden-lg">
+        <div class="bg-lightgray">
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" ui-sref="app.overview"><img src="img/app-icon-flat-hdpi.png" alt="App Icon" class="height-100" /></a>
+                        <div class="navbar-text m-l-0" style="float:left;">{{appConfig.name}}</div>
+                        <a class="navbar-text pull-right p-r-15 area-clickable a-primary" ng-click="expanded = !expanded"><i class="fa fa-fw fa-bars"></i></a>
+                        <a class="navbar-text pull-right p-r-15 area-clickable a-primary" href="files/sandor-agafonoff-cv.pdf" target="_blank"><i class="fa fa-file-pdf-o m-r-5"></i> Download CV</a>
+                    </div>
+                    <div uib-collapse="!expanded">
+                        <ul class="nav navbar-nav">
+                            <li ng-class="{'active': activeState === 'app.overview'}" ng-click="expanded = false"><a ui-sref="app.overview">Overview</a></li>
+                            <li ng-class="{'active': activeState === 'app.overview.objective'}" ng-click="expanded = false"><a ui-sref="app.overview.objective">Objective</a></li>
+                            <li ng-class="{'active': activeState === 'app.overview.experience'}" ng-click="expanded = false"><a ui-sref="app.overview.experience">Experience</a></li>
+                            <li ng-class="{'active': activeState === 'app.overview.extras'}" ng-click="expanded = false"><a ui-sref="app.overview.extras">Extras</a></li>
+                            <li ng-class="{'active': activeState === 'app.overview.contact'}" ng-click="expanded = false"><a ui-sref="app.overview.contact">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

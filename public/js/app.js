@@ -9,7 +9,7 @@ webApp.factory('appConfig', [function () {
             production: {
             },
             development: {
-                name: 'Sandor Agafonoff',
+                name: 'Sandy Agafonoff',
                 version: 'v1.0',
                 author: 'Sandor Agafonoff',
                 license: 'MIT License'
@@ -30,8 +30,17 @@ webApp.run(['$location', '$state', '$rootScope', '$timeout', '$window', 'appConf
         $rootScope.MetaTags = MetaTags;
         $rootScope.appConfig = appConfig;
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState) {
-            if (!toParams.retainScroll) {
-                document.body.scrollTop = document.documentElement.scrollTop = 0;
+            if (toState.scroll) {
+                if (toState.scroll.elem === 'top') {
+                    document.body.scrollTop = document.documentElement.scrollTop = 0;
+                }
+                else {
+                    $timeout(function() {
+                        $('html, body').animate({
+                            scrollTop: $('#' + toState.scroll.elem).offset().top - 50
+                        }, 650);
+                    });
+                }
             }
             $rootScope.activeState = toState.name;
         });

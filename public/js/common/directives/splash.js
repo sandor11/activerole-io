@@ -16,7 +16,7 @@ angular.module('webApp').service('preloadService', ['$rootScope', function ($roo
             window.loading_screen = window.pleaseWait({
                 logo: '',
                 backgroundColor: '#09F',
-                loadingHtml: '<div class="loading-message text-uppercase c-white font-meduim fs-36">Just getting ready.</div>'
+                loadingHtml: '<div class="loading-message c-white font-light fs-24 m-0-auto" style="max-width:540px;"><div><img src="img/app-icon-flat-hdpi.png" style="width:50%;" /></div><div class="m-t-30">Opening Personnel File</div></div>'
             });
             loading = true;
         };

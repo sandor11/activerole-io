@@ -1,4 +1,4 @@
-<div class="container-fluid bg-cover" style="background-image: url(img/bg/fw-bg.png)">
+<div class="container-fluid bg-cover z-behind p-relative" style="background-image: url(img/bg/fw-bg.png)">
     <div class="bg-white-alpha p-b-30">
         <div class="jumbotron bg-transparent text-center c-gray m-b-0">
             <h1 class="font-heavy">Sandor Agafonoff: <small class="font-heavy c-gray">That Software Guy</small></h1>
@@ -41,7 +41,7 @@
                         <div class="card-body m-t-5 border-radius-default">
                             <div>
                                 Current Dev Language (12 months exclusively)<br />
-                                <span ng-class="{'font-medium': highlight.js}">JavaScript (Full Stack)<br />
+                                <span ng-class="{'font-medium c-accent': highlight.js}">JavaScript (Full Stack)<br />
                                 MEAN(MongoDB, ExpressJS, AngularJS, NodeJS)<br /></span>
                                 Learning: <span class="font-medium">TypeScript + AngularJS 2</span>
                             </div>
@@ -58,27 +58,66 @@
     </div>
 </div>
 
-<div class="text-center bg-gray c-white p-v-15">
+<div id="objective" class="text-center bg-gray c-white p-v-15 box-shadow-1 z-top p-relative">
     <h2 class="font-bold">My Objective</h2>
     <p class="fs-18">To find a position in software development which allows me to be creative, have input, and either oversee or be a part of the end to end delivery process.</p>
 </div>
 
-<div class="bg-lightgray p-v-15">
+<div id="experience" class="bg-lightgray p-v-15 box-shadow-1 z-front p-relative">
     <div class="container">
         <h2 class="font-bold text-center">Work Experience</h2>
-        <div class="text-center inline-children">
-            <div class="m-10">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" ng-model="highlight.js"> JavaScript
-                    </label>
+        <p class="text-center">I have seen many technologies, been a part of many teams and deliver a bunch of projects. Here is the run down.</p>
+        <div class="text-center m-t-30">
+            <h5 class="font-medium">Highlight by technology</h5>
+            <div class="inline-children">
+                <div class="m-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="highlight.js"> JavaScript
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <div class="m-10">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" ng-model="highlight.front"> Front End
-                    </label>
+                <div class="m-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="highlight.html"> HTML/CSS
+                        </label>
+                    </div>
+                </div>
+                <div class="m-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="highlight.java"> Java
+                        </label>
+                    </div>
+                </div>
+                <div class="m-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="highlight.lamp"> LAMP/WAMP
+                        </label>
+                    </div>
+                </div>
+                <div class="m-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="highlight.ms"> Microsoft
+                        </label>
+                    </div>
+                </div>
+                <div class="m-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="highlight.front"> Front End
+                        </label>
+                    </div>
+                </div>
+                <div class="m-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="highlight.back"> Back End
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -100,11 +139,11 @@
                     <p>In this role I have found it necessary to work with a variety of technology platforms. This
                     is due to client infrastructure and costs that can sometimes dictate the technology stack for the software.</p>
                     <ul>
-                        <li><span ng-class="{'font-medium': highlight.js}">JavaScript MEAN(MongoDB, ExpressJS, AngularJS, NodeJS)</span></li>
-                        <li>LAMP(Linux, Apache, MySQL, PHP)</li>
-                        <li>Java (J2EE/J2SE, MySQL, Tomcat)</li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.js || highlight.html || highlight.front || highlight.back}">JavaScript MEAN(MongoDB, ExpressJS, AngularJS, NodeJS)</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.lamp || highlight.front || highlight.back || highlight.html}">LAMP(Linux, Apache, MySQL, PHP)</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.java || highlight.back}">Java (J2EE/J2SE, MySQL, Tomcat)</span></li>
                         <li>Cloud based deployment (AWS, Google Compute)</li>
-                        <li><span ng-class="{'font-medium': highlight.front}">HTML/CSS3/LESS/<span ng-class="{'font-medium': highlight.js}">VanillaJS</span></span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.front}"><span ng-class="{'font-medium c-accent': highlight.html}">HTML/CSS3</span>/LESS/<span ng-class="{'font-medium c-accent': highlight.js}">VanillaJS</span></span></li>
                         <li>npm, bower, Grunt</li>
                     </ul>
                 </div>
@@ -115,12 +154,12 @@
                     <h5 class="font-medium">Projects</h5>
                     <p>I undertook many projects, all were end to end, analysis through to deployment.</p>
                     <ul>
-                        <li>Job management <span ng-class="{'font-medium': highlight.js}">javascript (MEAN) application</span> for the construction industry</li>
-                        <li>Business Workflow/process improvement <span ng-class="{'font-medium': highlight.js}">javascript (MEAN) applicaton</span></li>
-                        <li>Internal booking system + Public API for public bookings via custom website <span ng-class="{'font-medium': highlight.js}">(MEAN Stack)</span></li>
-                        <li>Website conversions to <span ng-class="{'font-medium': highlight.js || highlight.front}">AngularJS + Boootstrap apps</span></li>
-                        <li>LAMP based websites and application</li>
-                        <li>Java touch screen based training packages for the mining industry</li>
+                        <li>Job management <span ng-class="{'font-medium c-accent': highlight.js || highlight.html|| highlight.front || highlight.back}">javascript (MEAN) application</span> for the construction industry</li>
+                        <li>Business Workflow/process improvement <span ng-class="{'font-medium c-accent': highlight.js || highlight.html || highlight.front || highlight.back}">javascript (MEAN) applicaton</span></li>
+                        <li>Internal booking system + Public API for public bookings via custom website <span ng-class="{'font-medium c-accent': highlight.js || highlight.html || highlight.front || highlight.back}">(MEAN Stack)</span></li>
+                        <li>Website conversions to <span ng-class="{'font-medium c-accent': highlight.js || highlight.front || highlight.html}">AngularJS + Boootstrap apps</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.lamp || highlight.html || highlight.back || highlight.front}">LAMP based websites and application</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.java || highlight.back || highlight.front || highlight.html}">Java touch screen</span> based training packages for the mining industry</li>
                     </ul>
                 </div>
             </div>
@@ -141,11 +180,11 @@
                     <h5 class="font-medium">Technology Exposure</h5>
                     <p>This role required internal web application delivery and maintenance.</p>
                     <ul>
-                        <li>C#.NET, .NET MVC</li>
-                        <li>MS SQL Server 2008</li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.ms || highlight.back}">C#.NET, .NET MVC</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.ms || highlight.back}">MS SQL Server 2008</span></li>
                         <li>Windows Server 2008 IIS</li>
-                        <li>HTML/CSS</li>
-                        <li><span ng-class="{'font-medium': highlight.js || highlight.front}">JavaScript/jQuery</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.html || highlight.front}">HTML/CSS</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.js || highlight.front}">JavaScript/jQuery</span></li>
                     </ul>
                 </div>
             </div>
@@ -153,7 +192,7 @@
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <div class="bg-white-alpha p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Projects</h5>
-                    <p>I was writing C# code and SQL scripts day to day, signing off bugs and engaging with end users about issues/enhancements</p>
+                    <p>I was writing <span ng-class="{'font-medium c-accent': highlight.jms || highlight.back}">C# code and SQL scripts day to day</span>, signing off bugs and engaging with end users about issues/enhancements</p>
                     <ul>
                         <li>CRM system upgrade/completion (work with over 400,000 records)</li>
                         <li>Internal application support</li>
@@ -179,7 +218,7 @@
                     <h5 class="font-medium">Technology Exposure</h5>
                     <p>This was a consultant role which I only held briefly due to a lack of incoming projects</p>
                     <ul>
-                        <li>Java/Oracle Forms</li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.java || highlight.back}">Java/Oracle Forms</span></li>
                     </ul>
                 </div>
             </div>
@@ -213,10 +252,10 @@
                     <h5 class="font-medium">Technology Exposure</h5>
                     <p>This was a Java based role in an enterprise environemnt.</p>
                     <ul>
-                        <li>Java (J2EE, J2SE)</li>
-                        <li>JSP/HTML/CSS</li>
-                        <li>Tomcat</li>
-                        <li>TCP/IP, Networks, MATIP, EMTOX, X.25, SNMP</li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.java || highlight.back}">Java (J2EE, J2SE)</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.java || highlight.back}">JSP</span>/<span ng-class="{'font-medium c-accent': highlight.html || highlight.front}">HTML/CSS</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.java || highlight.back}">Tomcat</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.back}">TCP/IP, Networks, MATIP, EMTOX, X.25, SNMP</span></li>
                         <li>Load Balancing, Disaster Recovery, Microsoft Server Cluster</li>
                     </ul>
                 </div>
@@ -229,7 +268,7 @@
                     between legacy mainframe systems and modern IP based systems. Average throughput for OMSE was approx 3200 messages/sec.</p>
                     <ul>
                         <li>Track down, report and escalate bugs</li>
-                        <li>Take control of advancing the online configuration switch feature to be inline with other softare improvements</li>
+                        <li>Take control of advancing the online configuration switch feature to be in line with other software improvements</li>
                         <li>Created a unique system for sending keepalive messages between OMSE and mainframe hosts using SNMP</li>
                         <li>Performance tests, benchmarking and tracing memory leak</li>
                     </ul>
@@ -253,9 +292,9 @@
                     <h5 class="font-medium">Technology Exposure</h5>
                     <p>This was a part time role working on websites while I was at Uni.</p>
                     <ul>
-                        <li><span ng-class="{'font-medium': highlight.front}">HTML/CSS/<span ng-class="{'font-medium': highlight.js}">JavaScript</span></span></li>
-                        <li>C#, SQL Server</li>
-                        <li>PHP, MySQL</li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.front}"><span ng-class="{'font-medium c-accent': highlight.html}">HTML/CSS</span>/<span ng-class="{'font-medium c-accent': highlight.js}">JavaScript</span></span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.ms || highlight.back}">C#, SQL Server</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.lamp || highlight.back}">PHP, MySQL</span></li>
                         <li>Windows Server IIS</li>
                         <li>Cold Fusion</li>
                     </ul>
@@ -277,14 +316,14 @@
     </div>
 </div>
 
-<div class="bg-primary p-v-15">
+<div id="extras" class="bg-primary p-v-15">
     <div class="container">
-        <h2 class="font-bold text-center">Things I Love</h2>
-        <p class="fs-18">I love to work, coding is my thing. I also love the variety of people you get to meet whie doing it. My world does not stop with coding though.</p>
+        <h2 class="font-bold text-center">Things I Love <i class="fa fa-fw fa-heart"></i></h2>
+        <p class="fs-18">I love to work, coding is my thing. I also love the variety of people I get to meet while doing it. My world does not stop with coding though.</p>
     </div>
 </div>
 
-<div class="p-v-30 bg-lightgray c-gray">
+<div class="p-v-30 bg-lightgray c-gray box-shadow-1 z-top p-relative">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-15">
@@ -319,7 +358,7 @@
     </div>
 </div>
 
-<div class="p-v-30 bg-gray c-white">
+<div id="contact" class="p-v-30 bg-gray c-white box-shadow-1 z-front p-relative">
     <div class="container">
         <h2>Get in Touch</h2>
         <p>If you would to contact me about a role you may have then send me an email <a href="mailto:sandor@eleven11solutions.com.au" class="a-accent">sandor@eleven11solutions.com.au</a> please. I also appear to exists a number of other places around the web,
