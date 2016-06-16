@@ -1,0 +1,53 @@
+// timing delays
+.animation-delay-100 {-webkit-animation-delay: 100ms;-moz-animation-delay: 100ms;animation-delay: 100ms;}
+.animation-delay-300 {-webkit-animation-delay: 300ms;-moz-animation-delay: 300ms;animation-delay: 300ms;}
+.animation-delay-600 {-webkit-animation-delay: 600ms;-moz-animation-delay: 600ms;animation-delay: 600ms;}
+.animation-delay-900 {-webkit-animation-delay: 900ms;-moz-animation-delay: 900ms;animation-delay: 900ms;}
+.animation-delay-1s {-webkit-animation-delay: 1000ms;-moz-animation-delay: 1000ms;animation-delay: 1000ms;}
+.animation-delay-2s {-webkit-animation-delay: 2000ms;-moz-animation-delay: 2000ms;animation-delay: 2000ms;}
+.animation-delay-3s {-webkit-animation-delay: 3000ms;-moz-animation-delay: 3000ms;animation-delay: 3000ms;}
+.animation-delay-4s {-webkit-animation-delay: 4000ms;-moz-animation-delay: 4000ms;animation-delay: 4000ms;}
+.animation-delay-5s {-webkit-animation-delay: 5000ms;-moz-animation-delay: 5000ms;animation-delay: 5000ms;}
+
+// animation helpers
+.animation-wait {opacity:0;}
+
+// hide overflow of containers containing off screen animations
+.animation-container {overflow:hidden;}
+
+// transformation helper 
+.transformable {
+    webkit-transition: -webkit-transform .15s ease 0s;
+    -moz-transition: -moz-transform .15s ease 0s;
+    -o-transition: -o-transform .15s ease 0s;
+    transition: transform .15s ease 0s;
+}
+
+// scale animations
+.scalable {
+    .transformable;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+.scale-0 {
+    -webkit-transform: scale3d(0,0,0);
+    transform: scale3d(0,0,0);
+}
+
+.scale-05 {
+    -webkit-transform: scale3d(1.05,1.05,1.05);
+    transform: scale3d(1.05,1.05,1.05);
+}
+
+.scale-10 {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+}
+
+.fadable {
+    transition: opacity .15s ease-out;
+  -moz-transition: opacity .15s ease-out;
+  -webkit-transition: opacity .15s ease-out;
+  -o-transition: opacity .15s ease-out;
+}

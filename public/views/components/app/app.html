@@ -1,0 +1,35 @@
+<!--
+    We are wrapping our app in a div with class .inner to enable our splash page to work
+    removing inner, or placing things outside of inner will prevent the page loading correctly.
+-->
+<div class="inner">
+    <header>
+        <div class="bg-lightgray">
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" ui-sref="app.overview"><img src="img/app-icon-flat-hdpi.png" alt="App Icon" class="height-100" /></a>
+                    </div>
+                    <div class="navbar-text m-l-0 text-uppercase">{{appConfig.name}}</div>
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{'active': activeState === 'app.overview'}"><a ui-sref="app.overview">Overview</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- This ui-view will hold our individual route view templates. -->
+    <div ui-view></div>
+
+    <footer class="bg-accent">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-v-15 text-right c-white font-light fs-12 inline-children">
+                    <div>Powered by <a href="https://github.com/sandor11/activerole-io" class="a-white">activerole-io</a> using <a href="https://github.com/sandor11/angular-bootstrap-seed" class="a-white">angular-bootstrap-seed</a>.</div>
+                    <div>{{appConfig.license}}.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

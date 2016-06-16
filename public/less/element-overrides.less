@@ -1,0 +1,61 @@
+// iframe default where the seamless attribute is present
+iframe[seamless] {background-color: transparent;border: 0px none transparent;padding: 0px;overflow: hidden;}
+
+// light galllery backdrop is solid #000 be default, here we add an opacity
+.lg-backdrop.in {opacity:0.85;}
+// special overlay for light gallery image thumbs prior to opening a gallery
+.lg-thumb {    
+    &:before {
+        .font-awesome;
+        color: #FFF;
+        content: '\f00e';
+        font-size: 20px;
+        padding: 3px;
+        line-height: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -13px;
+        margin-left: -11px;
+        z-index: 10;
+        opacity: 0;
+        .fadable;
+    }
+    
+    .p-relative;
+    
+    > img {
+        .scalable;
+    }
+    
+    &:hover, &:focus {
+        &:before {
+            opacity: 1;
+        }
+        
+        > img {
+            .scale-05;
+        }
+        
+        > .lg-thumb-overlay {
+            opacity:1;
+            .scale-05;
+        }
+    }
+    
+    > .lg-thumb-overlay {
+        background-color: rgba(0,0,0,0.65);
+        z-index: 5;
+        opacity:0;
+        .fadable;
+        .scalable;
+    }
+}
+
+// be default videojs containers are aligned to the left, we change that to center 
+// if you add the .video-center class to the immediate parent
+.video-container {
+    &.video-center {
+        > div {.m-0-auto;}
+    }
+}

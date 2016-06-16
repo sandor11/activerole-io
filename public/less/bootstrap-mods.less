@@ -1,0 +1,86 @@
+body {color:@default-font-color;}
+.navbar {margin-bottom:0px;}
+.navbar-default {background-color: transparent;border: none;}
+.navbar-default .navbar-nav > li > a {background-color: @lightgray;}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {color: @app-secondary;background-color: transparent;}
+.navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > li.active > a:hover, .navbar-default .navbar-nav > li.active > a:focus {color: @app-secondary;}
+.navbar-brand {padding:5px;}
+a {
+    color:@darkgray;
+    
+    &.a-primary {
+        color: @app-primary;
+        &:hover, &:focus {
+            text-decoration: none; color: lighten(@app-primary, 12%);
+        }
+    }
+    
+    &.a-white {
+        color: #fff;
+        &:hover, &:focus {
+            text-decoration: none; color: darken(#fff, 3%);
+        }
+    }
+    
+    &.a-secondary {
+        color: @app-secondary;
+        &:hover, &:focus {
+            text-decoration: none; color: darken(@app-secondary, 10%);
+        }
+    }
+    
+    &.a-accent {
+        color: @app-accent;
+        &:hover, &:focus {
+            text-decoration: none; color: darken(@app-accent, 10%);
+        }
+    }
+    
+    &:hover, &:focus {
+        text-decoration: none; color: @app-primary;
+    }
+}
+
+.btn {
+    &.btn-primary {
+        background-color: @app-primary;
+        color:#FFF;
+        border: 1px solid darken(@app-primary, 5%);
+        text-transform: uppercase;
+        .font-bold;
+        &:hover, &:focus {
+            background-color:  lighten(@app-primary, 12%);
+        }
+    }
+    &.btn-secondary {
+        background-color: @app-secondary;
+        color:#FFF;
+        border: 1px solid darken(@app-secondary, 5%);
+        text-transform: uppercase;
+        .font-bold;
+        &:hover, &:focus {
+            background-color:  lighten(@app-secondary, 12%);
+        }
+    }
+    &.btn-accent {
+        background-color: @app-accent;
+        color:#FFF;
+        border: 1px solid darken(@app-accent, 5%);
+        text-transform: uppercase;
+        .font-bold;
+        &:hover, &:focus {
+            background-color:  lighten(@app-accent, 12%);
+        }
+    }
+    &.btn-default {
+        background-color: @lightgray;
+        color:@darkgray;
+        border: 1px solid darken(@lightgray, 11%);
+        text-transform: uppercase;
+        .font-bold;
+        &:hover, &:focus {
+            background-color:  lighten(@lightgray, 5%);
+        }
+    }
+}
+

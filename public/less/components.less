@@ -1,0 +1,59 @@
+@component-border-color: #CCC;
+
+.card {    
+    .card-header {
+        .p-v-10;.p-h-20;.font-bold;
+        text-transform: uppercase;
+    }
+    
+     
+    .card-header-no-padding {
+        .p-0;
+    }
+    
+    .card-body {
+        .p-10;
+        background-color: @lightgray;
+        
+        &.card-body-no-padding {
+            .p-0;
+        }
+        
+        &.card-body-no-bg {
+            background-color: transparent;
+        }
+    }
+}
+
+.component-bordered {
+    border: 1px solid @component-border-color;
+}
+
+.anchor-overlay {
+    .abs-fill;z-index:10;background-color:rgba(255,255,255,0.5);
+}
+
+.anchor-overlay-hidden {
+    opacity:0;
+}
+
+// special list component with font awesome bullet styles
+ul.icon-bullets {list-style-type: none;}
+ul.icon-bullets > li {margin: 1em;}
+ul.icon-bullets > li:before {
+    .font-awesome;
+    float: left;
+    margin-left: -1.5em;
+    color: @app-accent;
+    line-height:1;
+}
+
+// bullet will be a checkmark
+ul.icon-bullets > li.check-mark:before {
+    content: '\f00c';
+}
+
+// bullet will be a lightbulb
+ul.icon-bullets > li.light-bulb:before {
+    content: '\f0eb';
+}
