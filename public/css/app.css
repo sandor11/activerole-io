@@ -359,6 +359,9 @@ body {
 .no-border-radius-bottom-right {
   border-bottom-right-radius: 0;
 }
+.inset-box-shadow-light {
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
 .animation-delay-100 {
   -webkit-animation-delay: 100ms;
   -moz-animation-delay: 100ms;

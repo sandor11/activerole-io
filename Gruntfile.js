@@ -36,7 +36,7 @@ module.exports = function (grunt) {
                     'ui-router-metatags.js': 'ui-router-metatags/dist/ui-router-metatags.js',
                     'angular-animate.js': 'angular-animate/angular-animate.js',
                     'ui-bootstrap-tpls.js': 'angular-bootstrap/ui-bootstrap-tpls.js',
-                    'lightgallery-all.js': 'lightgallery/dist/js/lightgallery-all.js',
+                    'lightgallery.js': 'lightgallery/dist/js/lightgallery.js',
                     'video.js': 'video.js/dist/video.js',
                     'Youtube.js': 'videojs-youtube/dist/Youtube.js',
                     'please-wait.js': 'please-wait/build/please-wait.js'
