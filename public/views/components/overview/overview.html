@@ -8,12 +8,12 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 m-b-15">
                     <div class="card">
-                        <div class="card-header bg-primary c-white border-radius-default">Statistics</div>
+                        <div class="card-header bg-primary c-white border-radius-default">Personal Stats</div>
                         <div class="card-body m-t-5 border-radius-default">
                             <ul class="list-unstyled">
                                 <li>Overall Experience: <span class="font-medium">20+ years</span></li>
-                                <li>Professional Experience: <span class="font-medium">10 years</span></li>
-                                <li>Positions Held: <span class="font-medium">6</span></li>
+                                <li>Professional Experience: <span class="font-medium">11 years</span></li>
+                                <li>Positions Held: <span class="font-medium">7</span></li>
                                 <li>Longest Position Held: <span class="font-medium">5+ years</span></li>
                                 <li>Longest Time Out: <span class="font-medium">3 months</span></li>
                                 <li>Favourite Employer (so far): <span class="font-medium">Unisys</span></li>
@@ -27,10 +27,13 @@
                         <div class="card-header bg-secondary c-white border-radius-default">Education</div>
                         <div class="card-body m-t-5 border-radius-default">
                             <div>
-                                1999<br />Macquarie College, NSW, Australia<br />Completed HSC
+                                Something planned for 2018<br />
                             </div>
                             <div class="m-t-15">
                                 2003 – 2006<br />University of Newcastle, NSW, Australia<br />B. Information Science (Software Development)
+                            </div>
+                            <div class="m-t-15">
+                                1999<br />Macquarie College, NSW, Australia<br />Completed HSC
                             </div>
                         </div>
                     </div>
@@ -40,15 +43,16 @@
                         <div class="card-header bg-accent c-white border-radius-default">Technology</div>
                         <div class="card-body m-t-5 border-radius-default">
                             <div>
-                                Current Dev Language (12 months exclusively)<br />
-                                <span ng-class="{'font-medium c-accent': highlight.js}">JavaScript (Full Stack)<br />
-                                MEAN(MongoDB, ExpressJS, AngularJS, NodeJS)<br /></span>
-                                Learning: <span class="font-medium">TypeScript + AngularJS 2</span>
-                            </div>
-                            <div class="m-t-15">
-                                Last Dev Language<br />
-                                <span class="font-medium">PHP (LAMP Stack)<br />
-                                    LAMP(Linux, Apache, MySQL, PHP)<br /></span>
+                                Current Dev Stack<br />
+                                <span class="font-medium" ng-class="{'c-accent': highlight.python || highlight.back}">Python + Django + DRF</span> + <span ng-class="{'font-medium c-accent': highlight.js || highlight.front}">AngularJS + Webpack</span><br />
+                                AWS<br />
+                                <span class="font-medium">CloudFormation, Aurora RDS (MySQL), Kinesis, S3, Route53, ElasticBeanstalk, EC2</span><br />
+                                DevOps<br />
+                                <span class="font-medium">git + bitbucket, Jenkins (CI/CD), Bora, AWS</span><br />
+                                Monitoring<br />
+                                <span class="font-medium">SumoLogic, Newrelic</span><br />
+                                Extras<br />
+                                <span class="font-medium">Agile (JIRA), Swagger</span>
                             </div>
                         </div>
                     </div>
@@ -87,6 +91,13 @@
                 <div class="m-10">
                     <div class="checkbox">
                         <label>
+                            <input type="checkbox" ng-model="highlight.python"> Python
+                        </label>
+                    </div>
+                </div>
+                <div class="m-10">
+                    <div class="checkbox">
+                        <label>
                             <input type="checkbox" ng-model="highlight.java"> Java
                         </label>
                     </div>
@@ -119,14 +130,70 @@
                         </label>
                     </div>
                 </div>
+                <div class="m-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="highlight.aws"> AWS
+                        </label>
+                    </div>
+                </div>
+                <div class="m-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="highlight.devops"> DevOps
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h4 class="p-h-15">isentia</h4>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
+                    <h5 class="font-medium">Details</h5>
+                    <div class="">When: <span class="font-medium">2016 Jul - Today</span></div>
+                    <div class="">Role: <span class="font-medium">Senior UI Engineer</span></div>
+                    <div class="">Type: <span class="font-medium">Permanent</span></div>
+                    <div class="">Length Of Employment: <span class="font-medium">6 months</span></div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
+                    <h5 class="font-medium">Technology Exposure</h5>
+                    <p>Almost everything at isentia has been a learning experience. I started as an AngularJS/NodeJS engineer, but then...</p>
+                    <ul>
+                        <li><span ng-class="{'font-medium c-accent': highlight.python || highlight.html || highlight.front || highlight.back}">Python, Django, DRF, AngularJS, webpack</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.aws || highlight.devops}">CloudFormation, Aurora RDS (MySQL), DynamoDB, S3, Route53, ElasticBeanstalk, EC2, Kinesis</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.devops}">git + bitbucket, Jenkins (CI/CD), Bora</span></li>
+                        <li><span ng-class="{'font-medium c-accent': highlight.devops}">SumoLogic, Newrelic</span></li>
+                        <li>Agile (JIRA), Swagger</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
+                    <h5 class="font-medium">Projects</h5>
+                    <p>I worked as part of a cross functional, agile team, within the media monitoring space.</p>
+                    <ul>
+                        <li>Produce continually functional software</li>
+                        <li>Build a Django web application and API to support configuration of pipeline services</li>
+                        <li>Design UI and incorporate an AngularJS component to improve usability</span></li>
+                        <li>Automatic deployment via Jenkins + CloudFormation into an AWS environment, including auto scaling and high availability</li>
+                        <li>Use application logs to create SumoLogic charts for component analysis</li>
+                        <li>Follow Agile process and methodology</li>
+                        <li>Exposure to Big Data tools and processes including Apache Storm, Apache Kafka, Elastic search</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="row">
             <h4 class="p-h-15">Eleven11 Solutions</h4>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Details</h5>
-                    <div class="">When: <span class="font-medium">2011 - Today</span></div>
+                    <div class="">When: <span class="font-medium">2011 - 2016 Jun</span></div>
                     <div class="">Role: <span class="font-medium">Owner / Freelancer</span></div>
                     <div class="">Type: <span class="font-medium">Self Employed</span></div>
                     <div class="">Length Of Employment: <span class="font-medium">5+ years</span></div>
@@ -134,7 +201,7 @@
             </div>
             
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Technology Exposure</h5>
                     <p>In this role I have found it necessary to work with a variety of technology platforms. This
                     is due to client infrastructure and costs that can sometimes dictate the technology stack for the software.</p>
@@ -150,7 +217,7 @@
             </div>
             
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Projects</h5>
                     <p>I undertook many projects, all were end to end, analysis through to deployment.</p>
                     <ul>
@@ -167,7 +234,7 @@
         <div class="row">
             <h4 class="p-h-15">Scenic Tours</h4>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-15">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-15">
                     <div class="">When: <span class="font-medium">2010 Jan - 2011 Apr</span></div>
                     <div class="">Role: <span class="font-medium">Software Developer</span></div>
                     <div class="">Type: <span class="font-medium">Contract - # Extensions: 2</span></div>
@@ -176,7 +243,7 @@
             </div>
             
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Technology Exposure</h5>
                     <p>This role required internal web application delivery and maintenance.</p>
                     <ul>
@@ -190,7 +257,7 @@
             </div>
             
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Projects</h5>
                     <p>I was writing <span ng-class="{'font-medium c-accent': highlight.ms || highlight.back}">C# code and SQL scripts day to day</span>, signing off bugs and engaging with end users about issues/enhancements</p>
                     <ul>
@@ -204,7 +271,7 @@
         <div class="row">
             <h4 class="p-h-15">Oakton</h4>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-15">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-15">
                     <h5 class="font-medium">Details</h5>
                     <div class="">When: <span class="font-medium">2009 Sep - 2009 Dec</span></div>
                     <div class="">Role: <span class="font-medium">Consultant / Software Engineer</span></div>
@@ -214,7 +281,7 @@
             </div>
             
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Technology Exposure</h5>
                     <p>This was a consultant role which I only held briefly due to a lack of incoming projects</p>
                     <ul>
@@ -224,7 +291,7 @@
             </div>
             
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Projects</h5>
                     <p>I was only able to get onsite with one client</p>
                     <ul>
@@ -238,7 +305,7 @@
         <div class="row">
             <h4 class="p-h-15">Unisys</h4>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-15">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-15">
                     <h5 class="font-medium">Details</h5>
                     <div class="">When: <span class="font-medium">2007  Jan - 2009 Jun</span></div>
                     <div class="">Role: <span class="font-medium">Consultant / Junior Developer</span></div>
@@ -248,7 +315,7 @@
             </div>
             
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Technology Exposure</h5>
                     <p>This was a Java based role in an enterprise environment.</p>
                     <ul>
@@ -262,7 +329,7 @@
             </div>
             
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Projects</h5>
                     <p>I was hired as a consultant/developer to work on the OMSE(Open Message Switching Engine) team. OMSE was responsible for transforming communication
                     between legacy mainframe systems and modern IP based systems. Average throughput for OMSE was approx 3200 messages/sec.</p>
@@ -278,7 +345,7 @@
         <div class="row">
             <h4 class="p-h-15">Newcastle Infotech</h4>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-15">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-15">
                     <h5 class="font-medium">Details</h5>
                     <div class="">When: <span class="font-medium">2005 - 2007</span></div>
                     <div class="">Role: <span class="font-medium">Web Development</span></div>
@@ -288,7 +355,7 @@
             </div>
             
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Technology Exposure</h5>
                     <p>This was a part time role working on websites while I was at Uni.</p>
                     <ul>
@@ -302,7 +369,7 @@
             </div>
             
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="bg-white-alpha p-10 border-radius-default m-b-5">
+                <div class="bg-white-alpha inset-box-shadow-light p-10 border-radius-default m-b-5">
                     <h5 class="font-medium">Projects</h5>
                     <p>Worked on a few websites for Newcastle based businesses</p>
                     <ul>
